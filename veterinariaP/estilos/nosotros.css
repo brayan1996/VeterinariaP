@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+.header{
+    width: 100%;
+    text-align: end;
+    position: absolute;
+    top: 0;
+    padding: 0.1px;
+    background-color: transparent;
+    font-family: 'Oswald', sans-serif;
+    z-index: 110;
+    transition: all 1s;
+}
+.navegacion{
+    margin-right: 50px;
+}
+.navegacion__elemento{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    margin: 10px 35px;
+    font-weight: 900;
+}
+.navegacion__elemento:hover{
+    color: #fff;
+    text-decoration:underline;
+}
+.navegacion__lista li{
+    display: inline-block;
+    list-style: none;
+    font-size: 1.4rem;
+}
+/* .header .menu{
+    display: none;
+} */
+/*menu para movil*/
+.about__imagen--derecha{
+    display: block;
+    margin-left: auto;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(184, 58, 74);
+    clip-path: circle(100% at 100% 0);
+    position: sticky;
+    top: 0;
+    cursor: pointer;
+    z-index: 160;
+    transition: all 2s ease;
+    display: none;
+}
+.about__imagen--derecha img{
+    display: block;
+    width: 75%;
+    margin-left: auto;
+
+}
+.menu{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(184, 58, 74);
+    padding: 0.1px;
+    position: fixed;
+    top: 0;
+    z-index: 150;
+    transition: all .8s ease;
+}
+.uno{
+     clip-path: circle(0% at 100% 0);
+   
+}
+.dos{
+    clip-path: circle(150% at 100% 0);
+}
+.navegacion--modificado{
+    width: 100%;
+    height: 100%;
+    
+}
+.navegacion__lista--modificado{
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+.navegacion__elemento--modificado{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/*portada*/
+.portada{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: linear-gradient(to right,rgb(67, 0, 143),rgb(151, 3, 3));
+}    
+.portada .portada__texto{
+    width: 40%;
+}
+.portada .portada__texto h1{
+    font-size: 3.5rem;
+    color: rgb(1, 21, 204);
+    
+}
+.portada .portada__texto p{
+    font-size: 2rem;
+    color: rgb(206, 100, 0);
+}
+.wave{
+    position: absolute;
+    /*este position es con respecto al viewport no hay ningun relative arriba*/
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+.wave svg{
+   height: 100%;
+   width: 100%;
+}
+.wave path{
+   stroke: none; fill: rgb(255, 255, 255);
+}
+
+/*nostros*/
+.about{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    padding: 0.1px;
+}
+.subtitulo{
+    font-size: 3rem;
+    font-weight: 900;
+    color: rgb(248,177,40);
+    margin-bottom: 50px;
+    text-decoration:underline;
+}
+
+.about__contenedor{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 60vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(226, 225, 225);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+    rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.about__texto{
+    width: 40%;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: left;
+    color: rgb(3, 58, 53);
+}
+.about__boton{
+    width: 100%;
+    text-align: center;
+}
+.about__boton button{
+    padding: 10px 30px;
+    border: 2px solid rgb(3, 58, 53);
+    color: rgb(3, 58, 53);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+.about__boton button:hover{
+    background-color: rgba(3, 58, 53, 0.76);
+    color: #fff;
+}
+.about__img{
+    width: 50%;
+    height: 90%;
+}
+.about__img img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/*Personal*/
+.personal{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    text-align: center;
+}
+.personal__contenedor{
+    width:100%;
+    height: 80vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: linear-gradient(to right,rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(../img/veterinaria6.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.personal__contenedor .personal__elemento{
+    width: 20%;
+    height: 80%;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.704);
+}
+.personal__elemento .elemento__superior{
+    width: 100%;
+    height: 40%;
+    border-radius: 15px 15px 0 0;
+    padding: 0.1px;
+
+}
+.personal__elemento:nth-child(1) .elemento__superior{
+    background-color: rgba(0, 174, 255, 0.526);
+}
+.personal__elemento:nth-child(2) .elemento__superior{
+    background-color: rgba(14, 173, 49, 0.726);
+}
+.personal__elemento:nth-child(3) .elemento__superior{
+    background-color: rgba(255, 166, 0, 0.726);
+}
+.personal__elemento:nth-child(4) .elemento__superior{
+    background-color: rgba(255, 0, 43, 0.726);
+}
+.elemento__img{
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.elemento__inferior{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.elemento__nombre{
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+/*veterinaria*/
+.veterinaria{
+    width: 100%;
+    text-align: center;
+    
+}
+.veterinaria .contenedor{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.contenedor .elemento{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+    margin-bottom: 15px;
+   
+}
+.contenedor .elemento:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+    rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.elemento .elemento__img{
+  display: block;
+  width: 50%;
+  object-fit: cover;
+  object-position: center;
+  flex: 1;
+}
+.elemento .elemento__texto{
+    width: 40%;
+    padding: 50px;
+    font-size: 1.3rem; 
+    color: white;
+}
+.veterinaria .elemento .elemento__texto h3{
+    text-align: center;
+   font-weight: 900;
+   font-size: 2rem;
+}
+.veterinaria .elemento:nth-child(odd){
+    background-color: rgb(20, 185, 42);
+}
+.veterinaria .elemento:nth-child(even){
+    background-color: rgb(20, 146, 185);
+}
+.veterinaria .elemento:nth-child(odd) .elemento__texto{
+    order: 0;
+    
+}
+.elemento:nth-child(even) .elemento__texto{
+    order: 1;
+}
+@media screen and (max-width:480px) {
+    /* .header .menu{
+        display:block;
+    } */
+    .subtitulo{
+        font-size: 2.3rem;
+        margin:0 0 10px 0;
+    }
+    .navegacion{
+       display: none;
+    }
+    .about__imagen--derecha{
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: inherit;
+    }
+    
+    .portada{
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .portada .portada__imagen{
+        width: 100%;
+    }
+    .portada__imagen img{
+        display: block;
+        width: 100%;
+    }
+    .portada .portada__texto{
+        width: 70%;
+    }
+    .portada p{
+        display: none;
+    }
+    .about{
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .about .about__contenedor{
+        width: 95%;
+       height: auto;
+        flex-direction: column;
+        justify-content: space-around;
+        flex: 1 1 auto;
+        box-shadow:  0 0 0 0;
+    }
+    .about__contenedor .about__texto{
+        width: 100%;
+        text-align: initial;
+    }
+    .about__contenedor .about__img{
+        width: 100%;
+        height: 100%;
+    }
+    .personal .personal__contenedor{
+        flex-direction: column;
+    }
+    .personal__contenedor .personal__elemento{
+        width: 100%;
+        height: 20%;
+        display: flex;
+    }
+    .personal__elemento .elemento__superior{
+        width: 40%;
+        height: auto;
+    }
+    .elemento__inferior .personal__texto{
+        display: none;
+    }
+    .contenedor .elemento{
+        height: 100vh;
+        flex-direction: column;
+    }
+    .veterinaria .elemento .elemento__texto{
+        width: 100%;
+        padding: 1em;
+        text-align: inherit;
+        order: 0;
+    }
+    .elemento__texto h3{
+        margin: 10px 0;
+    }
+    .elemento .elemento__img{
+        width: 100%;
+    }
+}

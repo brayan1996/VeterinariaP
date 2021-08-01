@@ -1,0 +1,237 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+.header{
+    width: 100%;
+    text-align: end;
+    position: absolute;
+    top: 0;
+    padding: 0.1px;
+    background-color: transparent;
+    font-family: 'Oswald', sans-serif;
+    z-index: 110;
+    transition: all 1s;
+}
+.navegacion{
+    margin-right: 50px;
+}
+.navegacion__elemento{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    margin: 10px 25px;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+.navegacion__elemento:hover{
+    color: rgb(0, 255, 221);
+    text-decoration:underline;
+}
+.navegacion__lista li{
+    display: inline-block;
+    list-style: none;
+    font-size: 1.4rem;
+}
+
+/*para movil*/
+.about__imagen--derecha{
+    display: none;
+    margin-left: auto;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(184, 58, 74);
+    clip-path: circle(100% at 100% 0);
+    position: sticky;
+    top: 0;
+    cursor: pointer;
+    z-index: 160;
+    transition: all 2s ease;
+}
+.about__imagen--derecha img{
+    display: block;
+    width: 75%;
+    margin-left: auto;
+
+}
+.menu{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(184, 58, 74);
+    padding: 0.1px;
+    position: fixed;
+    top: 0;
+    z-index: 150;
+    transition: all .8s ease;
+}
+.uno{
+     clip-path: circle(0% at 100% 0);
+   
+}
+.dos{
+    clip-path: circle(150% at 100% 0);
+}
+.navegacion--modificado{
+    width: 100%;
+    height: 100%;
+    
+}
+.navegacion__lista--modificado{
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+.navegacion__elemento--modificado{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/* Portada main*/
+.portada{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.356) , rgba(0, 0, 0, 0.384))
+    ,url(../img/veterinaria6.jpg);
+    background-size: 200%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.1px;
+    animation: mover 10s infinite alternate linear;
+}
+
+@keyframes mover{
+    from {
+        background-position: 0 0;/*left bottom*/
+    }to{
+        background-position: 100% 100%;/*right top*/
+    }
+}
+
+.portada .titulo{
+    font-size: 5rem;
+    color: #fff;
+}
+.introduccion{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.introduccion .intro__texto{
+    width: 50%;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    background-color: rgba(4, 99, 4, 0.863);
+    padding: 1em;
+    transform: translateY(-50%);
+}
+.intro__texto h2{
+    font-size: 2.5rem;
+    color: #fff;
+}
+.intro__texto p{
+    font-size: 1.2rem;
+    color: rgb(0, 255, 221);
+}
+/*seccion alimentos */
+.seccion{
+    width: 100%;
+}
+.seccion h2{
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 900;
+   
+}
+.alimentos h2{
+    color: rgba(4, 99, 4, 0.863);
+}
+.seccion .contenedor{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.contenedor .elemento{
+    width: 300px;
+    
+    margin-bottom: 20px;
+}
+.alimentos .contenedor .elemento{
+    border: 2px solid rgba(4, 99, 4);
+}
+.elemento img{
+   display: block;
+    width: 100%;
+}
+.elemento .elemento__texto{
+    
+    width: 100%;
+    text-align: center;
+    background-color: rgb(104, 104, 104);
+    padding: 0;
+}
+.alimentos .elemento .elemento__texto{
+    border-top: 2px solid rgba(4, 99, 4);
+}
+.elemento__texto h3{
+    color: #fff;
+}
+.elemento__texto p{
+    color: #fff;
+    margin: 0;
+}
+.elemento__texto .elemento__precio{
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    font-weight: 900;
+    
+}
+.alimentos .elemento__precio{
+    color: rgba(4, 99, 4);
+}
+
+/*ACCESORIOS*/
+.accesorios h2{
+    color: rgba(28, 0, 151);
+}
+.accesorios .contenedor .elemento{
+    border: 2px solid rgba(28, 0, 151);
+}
+.accesorios .elemento .elemento__texto{
+    border-top: 2px solid rgba(28, 0, 151);
+}
+.accesorios .elemento__precio{
+    color: rgba(28, 0, 151);
+}
+@media screen and (max-width:480px) {
+    .navegacion{
+        display: none;
+    }
+    .about__imagen--derecha{
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: inherit;
+    }
+    .portada{
+        height: 50vh;
+    }
+    .portada .titulo{
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    .introduccion .intro__texto{
+        width: 95%;
+        transform: translateY(0);
+    }
+}
