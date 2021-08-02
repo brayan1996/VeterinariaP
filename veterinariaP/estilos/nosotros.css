@@ -107,6 +107,7 @@ body{
     justify-content: space-around;
     align-items: center;
     background-image: linear-gradient(to right,rgb(67, 0, 143),rgb(151, 3, 3));
+    position: relative;
 } 
 .portada__imagen img{
     display: block;
@@ -129,7 +130,7 @@ body{
     /*este position es con respecto al viewport no hay ningun relative arriba*/
     bottom: 0;
     width: 100%;
-    height: 150px;
+    height: 20%;
     overflow: hidden;
 }
 .wave svg{
@@ -400,14 +401,15 @@ body{
     
     .portada{
         flex-direction: column;
+        justify-content: center;
     }
     .portada .portada__imagen{
-        flex: 1;
         width: 80%;
     }
     
     .portada .portada__texto{
         width: 100%;
+        flex-grow: 0;
         text-align: center;
     }
     .portada p{
@@ -449,20 +451,54 @@ body{
     .elemento__inferior .personal__texto{
         display: none;
     }
-    /* .contenedor .elemento{
-        height: 100vh;
+}
+@media (min-width:661px) and (max-width:960px) and (orientation: landscape)  {
+    .portada{
+        height: 180vh;
+    }
+    .portada__texto h1{
+        margin: 0;
+        font-size: 1.5rem;
+    }
+    .portada__texto p{
+        margin: 0;
+        font-size: 1rem;
+    }
+}
+@media (max-width:960px) and (orientation: landscape) { 
+    .portada{
+        flex-direction: row;
+    }
+    .portada .portada__imagen{
+        width: 40%;
+    }
+    .portada .portada__texto{
+        flex: 1;
+    }
+    .personal .personal__contenedor{
+        flex-direction: row;
+        height: 90vh;
+    }
+    .personal__contenedor .personal__elemento{
+        width: 20%;
+        height: 100%;
         flex-direction: column;
     }
-    .veterinaria .elemento .elemento__texto{
+    .personal__elemento .elemento__superior{
         width: 100%;
-        padding: 1em;
-        text-align: inherit;
-        order: 0;
+        height: 40%;
     }
-    .elemento__texto h3{
-        margin: 10px 0;
+    .veterinaria .contenedor{
+        width: 90%;
+    }
+    .contenedor .elemento{
+        height: 200vh;
+    }
+    .elemento .elemento__texto{
+        
+        height: 50%;
     }
     .elemento .elemento__img{
-        width: 100%;
-    } */
+        height: 50%;
+    }
 }
