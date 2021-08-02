@@ -107,7 +107,11 @@ body{
     justify-content: space-around;
     align-items: center;
     background-image: linear-gradient(to right,rgb(67, 0, 143),rgb(151, 3, 3));
-}    
+} 
+.portada__imagen img{
+    display: block;
+    width: 100%;
+}   
 .portada .portada__texto{
     width: 40%;
 }
@@ -315,7 +319,63 @@ body{
 .elemento:nth-child(even) .elemento__texto{
     order: 1;
 }
-@media screen and (max-width:480px) {
+
+@media screen and (max-width:960px) {
+    .navegacion__lista{
+        width: 100%;
+        margin: 0;
+        display: flex;
+    }
+    .navegacion__lista li:nth-last-child(1){
+        display: none;
+    }
+    .portada .portada__imagen{
+        width: 40%;
+    }
+   
+    .portada .portada__texto{
+        flex: 1;
+    }
+    .about{
+        height: auto;
+    }
+    .about .about__contenedor{
+        width: 80%;
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .about__contenedor .about__texto{
+        width: 100%;
+        padding: 1em;
+    }
+    .about__texto h2{
+        text-align: center;
+    }
+    .about .about__img{
+        width: 100%;
+    }
+    .elemento__inferior .personal__texto{
+        display: none;
+    }
+    .contenedor .elemento{
+        height: 100vh;
+        flex-direction: column;
+    }
+    .veterinaria .elemento .elemento__texto{
+        width: 100%;
+        padding: 1em;
+        text-align: inherit;
+        order: 0;
+    }
+    .elemento__texto h3{
+        margin: 10px 0;
+    }
+    .elemento .elemento__img{
+        width: 100%;
+    }
+}
+@media screen and (max-width:660px) {
     /* .header .menu{
         display:block;
     } */
@@ -326,6 +386,11 @@ body{
     .navegacion{
        display: none;
     }
+    
+    .menu{
+        font-size: 1.2rem;
+        height: 100vh;
+    }
     .about__imagen--derecha{
         position: fixed;
         top: 0;
@@ -335,18 +400,15 @@ body{
     
     .portada{
         flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
     }
     .portada .portada__imagen{
-        width: 100%;
+        flex: 1;
+        width: 80%;
     }
-    .portada__imagen img{
-        display: block;
-        width: 100%;
-    }
+    
     .portada .portada__texto{
-        width: 70%;
+        width: 100%;
+        text-align: center;
     }
     .portada p{
         display: none;
@@ -387,7 +449,7 @@ body{
     .elemento__inferior .personal__texto{
         display: none;
     }
-    .contenedor .elemento{
+    /* .contenedor .elemento{
         height: 100vh;
         flex-direction: column;
     }
@@ -402,5 +464,5 @@ body{
     }
     .elemento .elemento__img{
         width: 100%;
-    }
+    } */
 }

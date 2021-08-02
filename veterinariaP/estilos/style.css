@@ -475,9 +475,24 @@ main{
 .footer .contactenos .contactenos--texto{
    margin-left: 30px;
 }
-.contactenos__elemento{
+.contactenos__elemento {
     display: flex;
     margin-bottom: 8px;
+    font-size: 1.4rem;
+}
+.contactenos__elemento a{
+    text-decoration: none;
+    color: #fff;
+}
+.contactenos__elemento .contactenos__direccion{
+    animation: aparecer 1s infinite linear alternate;
+}
+@keyframes aparecer{
+    0%{
+        opacity: 0;
+    } 100%{
+        opacity: 1;
+    }
 }
 .redes p{
     margin-bottom: 0;
@@ -524,35 +539,85 @@ main{
         transform: translateX(0);
     }
 }
+@media screen and (max-width:960px) {
+    .navegacion__lista{
+        width: 100%;
+        margin: 0;
+        display: flex;
+    }
+    .navegacion__lista li:nth-last-child(1){
+        display: none;
+    }
+    .home .home__imagen{
+        left: -100px;
+        top: 50px;
+    }
+    .grupo__elemento img{
+        width: 70%;
+        left: 0;
+        bottom: 10%;
+    }
+    .home .home__texto{
+        width: 60%;
+    }
+    .about{
+        height: auto;
+    }
+    .about .about__contenedor{
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .about__contenedor .about__texto{
+        width: 100%;
+        padding: 1em;
+    }
+    .about .about__img{
+        width: 100%;
+    }
+    .servicios{
+        width: 90%;
+    }
+    .servicios__elemento .text__right{
+        width: 80%;
+    }
+    .footer .contactenos{
+        width: 50%;
+        left: 0;
+    }
+}
 
-@media screen and (max-width:480px) {
+
+@media screen and (max-width:660px) {
     body{
         font-size: 0.8rem;
     }
     .grupo__elemento img{
         width: 100%;
         left: 0;
-        bottom: 10%;
     }
     .home{
-       justify-content:flex-start;
+       text-align: end;
        /* width: 100vw; */
     }
     .home__icono{
-        display: none;
+       position: absolute;
+       top: 0;
+       left: 0;
     }
     .home .home__imagen{
         display: none;
     }
-    .home__texto{
-        width: 90%;
-        margin-bottom: 100px;
-    }
-    /* .home__texto .parrafo{
+    
+    .home__texto .parrafo{
         display: none;
-    } */
+    }
     .header {
         display: none;
+    }
+    .menu{
+        font-size: 1.2rem;
+        height: 100vh;
     }
     .about__imagen--derecha{
         position: fixed;

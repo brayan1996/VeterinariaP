@@ -215,9 +215,29 @@ body{
 .accesorios .elemento__precio{
     color: rgba(28, 0, 151);
 }
-@media screen and (max-width:480px) {
+
+@media screen and (max-width:960px) {
+    .navegacion__lista{
+        width: 100%;
+        display: flex;
+    }
+    .navegacion__lista li:nth-last-child(1){
+        display: none;
+    }
+    .portada .titulo{
+        text-align: center;
+    }
+    .introduccion .intro__texto{
+        width: 80%;
+    }
+}
+@media screen and (max-width:660px) {
     .navegacion{
         display: none;
+    }
+    .menu{
+        font-size: 1.2rem;
+        height: 100vh;
     }
     .about__imagen--derecha{
         position: fixed;
