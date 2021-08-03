@@ -239,6 +239,10 @@ body{
         font-size: 1.2rem;
         height: 100vh;
     }
+    .navegacion--modificado .navegacion__lista--modificado{
+        height: 80%;
+        font-size: 1.5rem;
+    }
     .about__imagen--derecha{
         position: fixed;
         top: 0;

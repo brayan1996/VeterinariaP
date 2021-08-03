@@ -624,7 +624,7 @@ main{
         display: none;
     }
     
-    .home__texto .parrafo{
+    .home__texto .titulo +.parrafo{
         display: none;
     }
     .header {
