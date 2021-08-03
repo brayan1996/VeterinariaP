@@ -1,10 +1,11 @@
 const typed = new Typed('.typed', {
-	// strings: [
-	// 	'<i class="mascota">Gato</i>',
-	// 	'<i class="mascota">Perro</i>',
-	// 	'<i class="mascota">Conejo</i>',
-	// 	'<i class="mascota">Pez</i>'
-	// ],
+	strings: [
+		'<i class="mascota">Gato</i>',
+		'<i class="mascota">Perro</i>',
+		'<i class="mascota">Conejo</i>',
+		'<i class="mascota">Loro</i>',
+		'<i class="mascota">Pez</i>'
+	],
 
 	stringsElement: '#cadenas-texto', // ID del elemento que contiene cadenas de texto a mostrar.
 	typeSpeed: 75, // Velocidad en mlisegundos para poner una letra,

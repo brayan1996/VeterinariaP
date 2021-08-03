@@ -472,17 +472,23 @@ main{
     position: relative;
     left: 10%;
 }
-.footer .contactenos .contactenos--texto{
+.contactenos .contactenos--texto{
    margin-left: 30px;
 }
 .contactenos__elemento {
     display: flex;
+    justify-content: space-between;
     margin-bottom: 8px;
     font-size: 1.4rem;
 }
 .contactenos__elemento a{
     text-decoration: none;
     color: #fff;
+}
+.contactenos__elemento > a{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 .contactenos__elemento .contactenos__direccion{
     animation: aparecer 1s infinite linear alternate;
@@ -606,6 +612,13 @@ main{
        position: absolute;
        top: 0;
        left: 0;
+       width: 200px;
+       height: 200px;
+    }
+    .home__icono img{
+        display: block;
+        width: 100%;
+        height: 100%;
     }
     .home .home__imagen{
         display: none;
@@ -620,6 +633,10 @@ main{
     .menu{
         font-size: 1.2rem;
         height: 100vh;
+    }
+    .navegacion--modificado .navegacion__lista--modificado{
+        height: 80%;
+        font-size: 1.5rem;
     }
     .about__imagen--derecha{
         position: fixed;
@@ -663,6 +680,7 @@ main{
     .footer .contactenos{
         width: 100%;
         left: 0;
+        background-color: rgba(0, 0, 0,0.95);
     }
 }
 @media (min-width:661px) and (max-width:960px) and (orientation: landscape) { 
@@ -671,6 +689,10 @@ main{
     }
     .navegacion__lista{
         margin-left: auto;
+    }
+    .navegacion--modificado .navegacion__lista--modificado{
+        height: 80%;
+        font-size: 1.5rem;
     }
     .home__texto .parrafo{
         display: none;
@@ -681,13 +703,17 @@ main{
     .footer .contactenos{
         width: 100%;
     }
+
    
 }
 @media (max-width:960px) and (orientation: landscape) { 
     .portada .home{
         clip-path: polygon(0% 65%, 0% 0%, 100% 0%, 100% 65%);
     }
-    
+    .navegacion--modificado .navegacion__lista--modificado{
+        height: 90%;
+        font-size: 1.5rem;
+    }
     .grupo__elemento:first-child img{
         bottom: 0;
     }
